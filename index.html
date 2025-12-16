@@ -3,13 +3,123 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>SEE</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='./node_modules/bootstrap/dist/css/bootstrap.min.css'>
+    <style>
+        .ig-der { flex: 0 0 30%; max-width: 30%; }
+        .ig-izq { flex: 1 1 auto; }
+    </style>
 </head>
-<body>
+<body class="">
     
+    <div class="container-fluid py-2">
+        <h1 class="h2 mb-2 text-center">SISTEMA DE EVALUACION DE ESTUDIANTES</h1>
+
+        <div class="row ">
+            <div class="col-1"></div>
+            <div class="col-10 border rounded-2 border-dark border-3">
+                <h2 class="text-center py-3">Lista de Estudiantes</h2>
+                <p>Verifique que los datos de los estudiantes esten correctamente escritos:</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10 border rounded-2 border-dark border-3">
+                <div class="input-group mb-1 p-3">
+                    <input
+                        type="text"
+                        class="form-control ig-izq"
+                        aria-label="Text input with checkbox"
+                    />
+                        <input
+                        type="number"
+                        class="form-control ig-der"
+                        aria-label="Text input with checkbox"
+                        min="0"
+                        max="10"
+                    />
+                    <div class="input-group-text">
+                        <input
+                            class="form-check-input mt-0"
+                            type="checkbox"
+                            value=""
+                            aria-label="Checkbox for following text input"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row py-4">
+            <div class="col-2"></div>
+            <div class="col-3">
+                <div class="d-grid gap-2">
+                    <button
+                        type="button"
+                        name=""
+                        id=""
+                        class="btn btn-primary"
+                    >
+                        Editar Lista
+                    </button>
+                </div>
+                
+            </div>
+
+            <div class="col-2"></div>
+            <div class="col-3">
+                <div class="d-grid gap-2">
+                    <button
+                        type="button"
+                        name=""
+                        id="btn_procesar"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modal_despliegue"
+                    >
+                        Procesar
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <!-- Vertically centered scrollable modal -->
+        <div class="modal fade" id="modal_despliegue" tabindex="-1" aria-labelledby="modal_despliegue_label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEditarLabel">Editar Lista</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+
+                <div class="modal-body">
+                    Aquí va el contenido (inputs, texto, etc.)
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-success">Guardar</button>
+                </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    
+
+
+
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src='./public/js/prueba.js'></script>
+    <script src='./public/js/procesamiento_notas.js'></script>
 </body>
 </html>
