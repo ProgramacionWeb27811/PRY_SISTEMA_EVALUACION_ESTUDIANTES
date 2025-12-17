@@ -110,9 +110,9 @@ function resultadosCurso(){
     var p_estado_curso = "Estado del curso: " + estado_curso;
     
     p_resultados.innerHTML = `${p_promedio_general} <br> ${p_estado_curso}`;
-    alumnos_aprobados.innerHTML += `${cont_aprob}`;
-    alumnos_supletorio.innerHTML += `${cont_supl}`;
-    alumnos_reprobados.innerHTML += `${cont_rep}`;
+    alumnos_aprobados.innerHTML = `Alumnos Aprobados (7~10): ${cont_aprob}`;
+    alumnos_supletorio.innerHTML = `Alumnos en Supletorio (5~6): ${cont_supl}`;
+    alumnos_reprobados.innerHTML = `Alumnos Reprobados (0~4): ${cont_rep}`;
 }
 
 var btn_procesar = document.getElementById('btn_procesar');
