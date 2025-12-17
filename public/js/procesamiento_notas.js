@@ -99,7 +99,7 @@ function cargarTablas(){
     }    
 }
 
-function resultadosCurso(){
+function mostrarResultadosCurso(){
     var alumnos_aprobados = document.getElementById('alumnos_aprobados');
     var alumnos_supletorio = document.getElementById('alumnos_supletorio');
     var alumnos_reprobados = document.getElementById('alumnos_reprobados');
@@ -126,5 +126,5 @@ btn_procesar.addEventListener('click', function(event){
 
     procesarNotas(notas);
     cargarTablas();
-    resultadosCurso();
+    mostrarResultadosCurso();
 });
