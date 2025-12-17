@@ -103,13 +103,12 @@ function resultadosCurso(){
     var alumnos_aprobados = document.getElementById('alumnos_aprobados');
     var alumnos_supletorio = document.getElementById('alumnos_supletorio');
     var alumnos_reprobados = document.getElementById('alumnos_reprobados');
-    var p_resultados = document.getElementById('p_resultados');
+    var promedio_general_curso = document.getElementById('promedio_general_curso');
+    var estado = document.getElementById('estado');
     
     
-    var p_promedio_general = "Promedio general: " + promedio_general.toFixed(2);
-    var p_estado_curso = "Estado del curso: " + estado_curso;
-    
-    p_resultados.innerHTML = `${p_promedio_general} <br> ${p_estado_curso}`;
+    promedio_general_curso.innerHTML = `Promedio general del curso: ${promedio_general.toFixed(2)}`;
+    estado.innerHTML = `Estado del curso: ${estado_curso}`;
     alumnos_aprobados.innerHTML = `Alumnos Aprobados (7~10): ${cont_aprob}`;
     alumnos_supletorio.innerHTML = `Alumnos en Supletorio (5~6): ${cont_supl}`;
     alumnos_reprobados.innerHTML = `Alumnos Reprobados (0~4): ${cont_rep}`;
